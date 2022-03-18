@@ -8,7 +8,7 @@ import './Home.css';
 
 function Home() {
 
-  const { data, isPending, error } = useFetch('http://localhost:3000/recipes');
+  const { data, isPending, error } = useFetch('https://my-json-server.typicode.com/umeraziz45/recipe-wiki-db/recipes');
 
   return (
     <div className='home'>

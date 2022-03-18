@@ -15,7 +15,7 @@ function Create() {
   const ingredientInput = useRef(null);
   const history = useHistory()
 
-  const { postData, data } = useFetch("http://localhost:3000/recipes", "POST")
+  const { postData, data } = useFetch("https://my-json-server.typicode.com/umeraziz45/recipe-wiki-db/recipes", "POST")
 
   const handleSubmit = (e) => {
     e.preventDefault();
