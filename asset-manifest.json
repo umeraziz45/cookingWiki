@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cookingWiki/static/css/main.18dbf9e5.chunk.css",
-    "main.js": "/cookingWiki/static/js/main.30989f5e.chunk.js",
-    "main.js.map": "/cookingWiki/static/js/main.30989f5e.chunk.js.map",
+    "main.js": "/cookingWiki/static/js/main.00077b73.chunk.js",
+    "main.js.map": "/cookingWiki/static/js/main.00077b73.chunk.js.map",
     "runtime-main.js": "/cookingWiki/static/js/runtime-main.128d8759.js",
     "runtime-main.js.map": "/cookingWiki/static/js/runtime-main.128d8759.js.map",
     "static/js/2.f8d3ef17.chunk.js": "/cookingWiki/static/js/2.f8d3ef17.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.128d8759.js",
     "static/js/2.f8d3ef17.chunk.js",
     "static/css/main.18dbf9e5.chunk.css",
-    "static/js/main.30989f5e.chunk.js"
+    "static/js/main.00077b73.chunk.js"
   ]
 }
