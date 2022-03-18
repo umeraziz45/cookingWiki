@@ -8,7 +8,7 @@ import './Recipe.css';
 function Recipe( ) {
 
   const { id } = useParams();
-  const url = "https://my-json-server.typicode.com/umeraziz45/recipe-wiki-db/recipes" + id;
+  const url = "https://my-json-server.typicode.com/umeraziz45/recipe-wiki-db/recipes/" + id;
 
   const { data: recipes, isPending, error } = useFetch(url);
 
