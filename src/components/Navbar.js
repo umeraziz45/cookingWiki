@@ -5,8 +5,10 @@ import './Navbar.css';
 import Searchbar from './Searchbar';
 
 export default function Navbar() {
+
+
   return (
-    <div className='navbar'>
+    <div className='navbar' >
       <nav>
 
         <Link to='/' className='brand'>

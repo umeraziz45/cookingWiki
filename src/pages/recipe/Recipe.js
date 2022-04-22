@@ -1,6 +1,6 @@
-import { useFetch } from '../../hooks/useFetch (1)';
-// import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { projectFirestore } from '../../firebase/config';
 
 // Import Style
 import './Recipe.css';
@@ -8,9 +8,26 @@ import './Recipe.css';
 function Recipe( ) {
 
   const { id } = useParams();
-  const url = "https://my-json-server.typicode.com/umeraziz45/recipe-wiki-db/recipes/" + id;
 
-  const { data: recipes, isPending, error } = useFetch(url);
+  const [recipes, setRecipes] = useState(null);
+  const [error, setError] = useState(false);
+  const [isPending, setIsPending ] = useState(false);
+
+  useEffect( () => {
+    setIsPending(true);
+    
+    projectFirestore.collection('recipes').doc(id).get().then( (document) => {
+      if(document.exists === true){
+        setIsPending(false);
+        setRecipes(document.data());
+      } else {
+        setIsPending(false);
+        setError('could not find recipe');
+      }
+    })
+
+
+  }, [id])
 
   return (
     <div className="recipe">
@@ -19,9 +36,11 @@ function Recipe( ) {
       {recipes && (
         <>
          <h2 className='page-title'>{recipes.title}</h2>
-         <p>Takes {recipes.cookingTime} to make</p>
+         <p>Takes {recipes["cooking time"]} to make</p>
          <ul>
-           {recipes.ingredients.map( ing => <li key={ing}>{ing}</li>)}
+           {recipes.ingredients.map( ing => 
+            <li key={ing}>{ing}</li>)
+           }
          </ul>
          <p className='method'>{recipes.method}</p>
         
