@@ -36,7 +36,7 @@ function Recipe( ) {
       {recipes && (
         <>
          <h2 className='page-title'>{recipes.title}</h2>
-         <p>Takes {recipes["cooking time"]} to make</p>
+         <p>Takes {recipes.cookingTime} to make</p>
          <ul>
            {recipes.ingredients.map( ing => 
             <li key={ing}>{ing}</li>)
