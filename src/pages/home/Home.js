@@ -18,7 +18,6 @@ function Home() {
     setIsPending(true);
 
     const unsub = projectFirestore.collection('recipes').onSnapshot( (snapshot) => {
-      console.log(snapshot);
       if(snapshot.empty === true){
         setError('no recipes to load');
         setIsPending(false);
@@ -27,10 +26,8 @@ function Home() {
         let results = [];
         snapshot.docs.forEach( (doc) => {
           results.push({ id: doc.id, ...doc.data() })
-          console.log(results);
         })
         setData(results);
-        console.log(data);
           setIsPending(false);
       }
     }, (err) => {

@@ -16,7 +16,7 @@ function Recipe( ) {
   useEffect( () => {
     setIsPending(true);
     
-    projectFirestore.collection('recipes').doc(id).get().then( (document) => {
+    projectFirestore.collection('recipes').doc(id).onSnapshot( (document) => {
       if(document.exists === true){
         setIsPending(false);
         setRecipes(document.data());
@@ -24,7 +24,7 @@ function Recipe( ) {
         setIsPending(false);
         setError('could not find recipe');
       }
-    })
+    }) 
 
 
   }, [id])

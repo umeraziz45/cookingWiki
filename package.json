@@ -1,6 +1,5 @@
 {
   "name": "cooking-ninja",
-  "homepage": "https://umeraziz45.github.io/cookingWiki/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
