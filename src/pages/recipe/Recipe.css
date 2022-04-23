@@ -15,7 +15,6 @@
 }
 
 .recipe li {
-  list-style: none;
   margin-right: 10px;
   color: #777;
 }
@@ -31,4 +30,19 @@
 .method {
   text-align: left;
   line-height: 1.5em;
+  margin-left: 20px;
+}
+
+.page-title {
+  margin-bottom: 0;
+}
+
+.page-sub-title {
+  margin-bottom: 1em;
+}
+
+.ingredient-list {
+  text-align-last: left;
+  display: flex;
+  flex-direction: column;
 }
